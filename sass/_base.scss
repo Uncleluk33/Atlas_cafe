@@ -1,0 +1,104 @@
+$bp-largest: 75em; //1200px;
+$bp-large: 62.5em; //1000px;
+$bp-medium: 50em; //800px;
+
+
+*,
+*:before,
+*:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px
+
+    @media only screen and (max-width: $bp-large){
+        font-size: 70%;         
+    }
+    @media only screen and (max-width: $bp-medium){
+        font-size: 50%;         
+    }
+
+    
+}
+
+body{
+    font-family: 'Advent Pro', sans-serif;
+    color:#888;
+    font-weight: 300;
+    line-height: 1.6;
+    min-height: 100vh;
+    background-image: linear-gradient(to right,#d5f2ef,#9cbab7); 
+}
+
+.container{
+    max-width: 120rem;
+    min-height: 50rem;
+    position: relative;
+    margin: 8rem auto;
+    box-shadow: 0 4.5rem 10rem rgba(#333, 0.6);
+
+    display: grid;
+    grid-template-columns: 20rem repeat(6,minmax(min-content, 20rem));
+    grid-template-rows: minmax(min-content, 35vh) max-content;
+    overflow: hidden;
+    border-radius: 10px;
+
+    @media only screen and (max-width: $bp-large){
+        grid-template-columns:repeat(6,minmax(min-content, 20rem));
+        grid-template-rows:6rem minmax(min-content, 35vh) max-content;
+          
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+
+        @media only screen and (max-width: $bp-medium){
+            grid-template-rows:4.5rem minmax(min-content, 35vh) max-content;
+
+        }
+    }
+
+
+}
+
+// .sidebar{
+//     display: flex;
+//     flex-direction: column;
+//     width: 20%;
+//     z-index: 3;
+//     background-image: linear-gradient(to bottom, #aaa,#bbb, transparent),
+//     url(../img/plate.jpg);
+//     background-size: 100%;
+//     background-repeat: no-repeat;
+//     background-position: bottom;
+// }
+
+// .menu{
+//     display: flex;
+//     flex-direction: column;
+//     list-style: none;
+//     color: #fff;
+//     height: 30rem;
+//     margin-left: 1.5rem;
+//     margin-top: 4rem;
+//     padding: 1rem;
+//     font-size: 1.5rem;
+//     text-transform: uppercase;
+//     justify-content: space-between;
+    
+// }
+
+// .pic{
+//     background-image: url(../img/cup.jpg);
+//    position: absolute;
+//    bottom: 0;
+//    left: 0;
+//    width: 20%;
+//    height: 40%;
+//    background-size: 100%;
+//    background-position: center;
+//    z-index: 1;
+// }
