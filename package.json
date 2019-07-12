@@ -4,10 +4,7 @@
   "description": "catering service",
   "main": "app.js",
   "scripts": {
-    "watch:sass": "node-sass public/sass/main.scss public/css/style.css -w",
-    "compile:sass": "node-sass public/sass/main.scss public/css/style.css",
-    "devserver": "live-server --browser=chrome",
-    "start": "npm-run-all --parallel devserver watch:sass"
+    
   },
   "author": "Tsahai Clahar",
   "license": "ISC",
